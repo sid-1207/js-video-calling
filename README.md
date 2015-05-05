@@ -1,6 +1,6 @@
 #Building a WebRTC Video Chat Application
 
-This tutorial will help you set up a barebones browser-browser video calling app. You can find the finished source code for this app on [our Github](https://www.github.com/web-video-calling)
+This tutorial will help you set up a barebones browser-browser video calling app. You can find the finished source code for this app on [our Github](https://github.com/sinch/js-video-calling)
 
 ![overview of app](images/overview.png)
 
