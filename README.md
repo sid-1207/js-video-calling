@@ -8,7 +8,7 @@ This tutorial will help you set up a barebones browser-browser video calling app
 - Video calling is currently supported in Chrome and Firefox
 - Video calling does not work on mobile browsers (they don't have WebRTC)
 - To properly run the app in Chrome, you need to start the browser with the flag `--allow-file-access-from-files` ([learn more here](https://www.sinch.com/tutorials/how-to-start-chrome-with-flags/))
-- This tutorial uses Sinch user management. This is only for prototyping. When you're ready for production, you need to use delegated security to authenticate users, which you can do with our [Rails + Devise tutorial](https://www.sinch.com/tutorials/authenticating-sinch-rails-app-devise/) and [C# tutorial](https://www.sinch.com/tutorials/using-delegated-security-application-server-using-c-sinch-sdk/).
+- This tutorial uses Sinch user management. This is only for prototyping. When you're ready for production, you need to use delegated security to authenticate users, which you can do with our [Rails + Devise tutorial](https://www.sinch.com/tutorials/authenticating-sinch-rails-devise/) and [C# tutorial](https://www.sinch.com/tutorials/using-delegated-security-application-server-using-c-sinch-sdk/).
 
 ##Setup
 1. Sign up for a Sinch developer account at [sinch.com/signup](https://www.sinch.com/signup)
