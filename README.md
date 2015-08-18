@@ -1,25 +1,25 @@
 #Building a WebRTC Video Chat Application
 
-This tutorial will help you set up a barebones browser-browser video calling app. You can find the finished source code for this app on [our Github](https://github.com/sinch/js-video-calling)
+This tutorial will help you set up a bare bones browser-to-browser video calling app. You can find the finished source code for this app on [our GitHub](https://github.com/sinch/js-video-calling).
 
 ![overview of app](images/overview.png)
 
-##FAQs
-- Video calling is currently supported in Chrome and Firefox
-- Video calling does not work on mobile browsers (they don't have WebRTC)
-- To properly run the app in Chrome, you need to start the browser with the flag `--allow-file-access-from-files` ([learn more here](https://www.sinch.com/tutorials/how-to-start-chrome-with-flags/))
+##Quick tips
+- Video calling is currently supported in Chrome and Firefox.
+- Video calling does not work on mobile browsers because they don't have WebRTC.
+- To properly run the app in Chrome, you need to start the browser with the flag `--allow-file-access-from-files`. ([Learn more here](https://www.sinch.com/tutorials/how-to-start-chrome-with-flags/).)
 - This tutorial uses Sinch user management. This is only for prototyping. When you're ready for production, you need to use delegated security to authenticate users, which you can do with our [Rails + Devise tutorial](https://www.sinch.com/tutorials/authenticating-sinch-rails-devise/) and [C# tutorial](https://www.sinch.com/tutorials/using-delegated-security-application-server-using-c-sinch-sdk/).
 
 ##Setup
-1. Sign up for a Sinch developer account at [sinch.com/signup](https://www.sinch.com/signup)
-2. In the developer dashboard, create a new app. You will need the app key in a few minutes [sinch.com/dashboard](https://www.sinch.com/dashboard/#/apps)
-3. Download the Sinch Javascript SDK from [sinch.com/downloads](https://www.sinch.com/downloads)
-4. Make a folder on your computer to store the files for this project
-5. Create the files **index.html** and **index.js**
-6. From the Sinch Javascript SDK, move **sinch.min.js** into your project folder
+1. Sign up for a Sinch developer account at [sinch.com/signup](https://www.sinch.com/signup).
+2. In the developer dashboard, create a new app. You will need the [app key](https://www.sinch.com/dashboard/#/apps) in a few minutes.
+3. Download the Sinch JavaScript SDK from [sinch.com/downloads](https://www.sinch.com/downloads).
+4. Make a folder on your computer to store the files for this project.
+5. Create the files **index.html** and **index.js**.
+6. From the Sinch JavaScript SDK, move **sinch.min.js** into your project folder.
 
 ##View
-I've made the html as simple as possible for the sake of keeping the tutorial short. I suggest making this prettier after you have the video calling working. Comments are inline below:
+I've made the HTML as simple as possible for the sake of keeping the tutorial short. I suggest you polish this after the video calling is working. Comments are inline below:
 
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -54,15 +54,15 @@ I've made the html as simple as possible for the sake of keeping the tutorial sh
         </div>
     </body>
     
-##Define Sinch Client
+##Define the Sinch client
     
-First, be sure to enclose all of your javascript in:
+First, be sure to enclose all of your JavaScript in:
 
     $("document").ready(function() {
         //all js code here!
     });
 
-Define the sinch client with your application key, and calling and video capabilities. 
+Define the Sinch client with your application key and calling and video capabilities. 
 
     sinchClient = new SinchClient({
         applicationKey: "YOUR_APP_KEY",
@@ -92,7 +92,7 @@ You can start the Sinch client (for testing purposes only) with a username and p
         sinchClient.start(signUpObj, afterStartSinchClient());          
     });
     
-To sign up a new user, register them with Sinch, and then start the client with the returned ticket.
+To sign up, register the new user with Sinch, and then start the client with the returned ticket.
 
     $("#signup").on("click", function (event) {
         event.preventDefault();
@@ -123,7 +123,7 @@ Now, define the method `afterStartSinchClient()`, which is anything you want to 
         callClient.addEventListener(incomingCallListener);
     }
     
-##Incoming Call and Current Call Listeners
+##Incoming call and current call listeners
 
 To listen for incoming calls:
 
@@ -157,9 +157,9 @@ Current call listeners:
         }
     }  
     
-##Call, Answer, Hangup
+##Call, answer and hang up
 
-The final piece - letting users start and stop calls!
+The final piece is letting users start and stop calls.
 
     $("#call").on("click", function (event) {
         event.preventDefault();
@@ -188,9 +188,4 @@ The final piece - letting users start and stop calls!
         }
     });
     
-You're all done! To test your app - open **index.html** in two separate browser tabs, sign up as two different users, and try calling each other. Please keep in mind that this is just a demo app, and error handling/general user experience is not ready for a production app. If you're running in Chrome, don't forget to start your browser with the `--allow-file-access-from-files` flag. 
-
-
-
-    
-    
+And you're done! To test your app, open **index.html** in two separate browser tabs, sign up as two different users, and try calling each other. Please keep in mind that this is just a demo app and error handling/general user experience is not ready for a production app. If you're running in Chrome, don't forget to start your browser with the `--allow-file-access-from-files` flag. 
