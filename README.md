@@ -1,6 +1,6 @@
 #Building a WebRTC Video Chat Application
 
-This tutorial will help you set up a bare bones browser-to-browser video calling app. You can find the finished source code for this app on [our GitHub](https://github.com/sinch/js-video-calling).
+This tutorial will help you set up a bare bones browser-to-browser video calling app. You can find the finished source code for this app on [our GitHub](https://github.com/sinch/js-video-calling) and read more our [WebRTC SDK](https://www.sinch.com/products/webrtc/).
 
 ![overview of app](images/overview.png)
 
